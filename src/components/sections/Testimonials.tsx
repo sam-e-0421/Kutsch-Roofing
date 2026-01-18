@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { TESTIMONIALS } from '@/lib/constants';
 import { getInitials } from '@/lib/utils';
@@ -27,19 +27,19 @@ export function Testimonials() {
 
   const maxIndex = Math.max(0, TESTIMONIALS.length - slidesPerView);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-  };
+  }, [maxIndex]);
 
-  const goToPrev = () => {
+  const goToPrev = useCallback(() => {
     setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
-  };
+  }, [maxIndex]);
 
   // Auto-advance
   useEffect(() => {
     const interval = setInterval(goToNext, 5000);
     return () => clearInterval(interval);
-  }, [maxIndex]);
+  }, [goToNext]);
 
   return (
     <section className="section bg-slate-50">
