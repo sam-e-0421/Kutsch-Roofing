@@ -27,31 +27,32 @@ export function ServicesPreview() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {SERVICES.map((service) => {
             const Icon = iconMap[service.icon] || Home;
+            const isFeatured = 'featured' in service && service.featured;
             return (
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
                 className={`group card p-6 ${
-                  service.featured
+                  isFeatured
                     ? 'bg-gradient-to-br from-navy-800 to-navy-900 border-transparent text-white'
                     : ''
                 }`}
               >
-                {service.featured && (
+                {isFeatured && (
                   <span className="absolute top-4 right-4 px-3 py-1 bg-gold-500 text-navy-900 text-xs font-bold uppercase tracking-wide rounded-full">
                     Most Popular
                   </span>
                 )}
                 <div
                   className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-all group-hover:scale-110 ${
-                    service.featured
+                    isFeatured
                       ? 'bg-gold-500/15 border border-gold-500/25'
                       : 'bg-navy-700/10 border border-navy-700/15 group-hover:bg-gold-500/15 group-hover:border-gold-500/25'
                   }`}
                 >
                   <Icon
                     className={`w-6 h-6 ${
-                      service.featured
+                      isFeatured
                         ? 'text-gold-500'
                         : 'text-navy-700 group-hover:text-gold-600'
                     }`}
@@ -60,14 +61,14 @@ export function ServicesPreview() {
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <p
                   className={`text-sm leading-relaxed mb-4 ${
-                    service.featured ? 'text-white/70' : 'text-slate-600'
+                    isFeatured ? 'text-white/70' : 'text-slate-600'
                   }`}
                 >
                   {service.shortDescription}
                 </p>
                 <span
                   className={`inline-flex items-center gap-2 text-sm font-semibold transition-colors ${
-                    service.featured
+                    isFeatured
                       ? 'text-gold-500 group-hover:text-gold-400'
                       : 'text-navy-700 group-hover:text-gold-600'
                   }`}
