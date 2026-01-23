@@ -1,8 +1,8 @@
-import { FileText, Wrench, CheckCircle } from 'lucide-react';
+import { FileText, Paintbrush, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { PROCESS_STEPS } from '@/lib/constants';
 
-const icons = [FileText, Wrench, CheckCircle];
+const icons = [FileText, Paintbrush, CheckCircle];
 
 export function Process() {
   return (
@@ -10,9 +10,9 @@ export function Process() {
       <div className="container-custom">
         <div className="section-header section-header-center">
           <span className="section-eyebrow">Our Process</span>
-          <h2 className="section-title">Simple, transparent, stress-free</h2>
+          <h2 className="section-title">Simple, clean, stress-free</h2>
           <p className="section-description">
-            From first contact to final walkthrough, we make the entire roofing experience seamless.
+            From first contact to final walkthrough, we make the entire painting experience seamless.
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export function Process() {
               >
                 {/* Connector line */}
                 {index < PROCESS_STEPS.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-gold-500 to-transparent" />
+                  <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-yellow-500 to-transparent" />
                 )}
 
                 {/* Step Number */}

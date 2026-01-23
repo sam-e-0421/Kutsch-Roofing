@@ -29,10 +29,10 @@ export function Button({
 }: ButtonProps) {
   const baseStyles = cn(
     'inline-flex items-center justify-center gap-2 font-semibold rounded-full transition-all duration-200 whitespace-nowrap',
-    'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500',
+    'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500',
     {
       // Variants
-      'bg-gradient-to-br from-gold-400 to-gold-500 text-navy-900 shadow-lg shadow-gold-500/30 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold-500/40':
+      'bg-gradient-to-br from-yellow-400 to-yellow-500 text-red-950 shadow-lg shadow-yellow-500/30 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-yellow-500/40':
         variant === 'primary',
       'border border-white/20 text-white bg-transparent hover:bg-white/10 hover:border-white/30 hover:-translate-y-0.5':
         variant === 'outline',

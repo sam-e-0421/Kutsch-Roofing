@@ -49,20 +49,20 @@ export function Testimonials() {
             <span className="section-eyebrow">Testimonials</span>
             <h2 className="section-title">What our customers are saying</h2>
             <p className="section-description">
-              Real reviews from real Nebraska homeowners who trusted us with their roofs.
+              Real reviews from real Nebraska homeowners who trusted us with their painting projects.
             </p>
           </div>
           <div className="flex gap-3">
             <button
               onClick={goToPrev}
-              className="w-12 h-12 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-700 hover:bg-navy-900 hover:border-navy-900 hover:text-white transition-all shadow-sm"
+              className="w-12 h-12 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-700 hover:bg-red-900 hover:border-red-900 hover:text-white transition-all shadow-sm"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={goToNext}
-              className="w-12 h-12 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-700 hover:bg-navy-900 hover:border-navy-900 hover:text-white transition-all shadow-sm"
+              className="w-12 h-12 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-700 hover:bg-red-900 hover:border-red-900 hover:text-white transition-all shadow-sm"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-5 h-5" />
@@ -86,7 +86,7 @@ export function Testimonials() {
                 {/* Stars */}
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-gold-500 text-gold-500" />
+                    <Star key={i} className="w-5 h-5 fill-yellow-500 text-yellow-500" />
                   ))}
                 </div>
 
@@ -97,7 +97,7 @@ export function Testimonials() {
 
                 {/* Author */}
                 <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 bg-navy-700/10 border border-navy-700/15 rounded-xl flex items-center justify-center font-bold text-sm text-navy-700">
+                  <div className="w-11 h-11 bg-red-700/10 border border-red-700/15 rounded-xl flex items-center justify-center font-bold text-sm text-red-700">
                     {getInitials(testimonial.author)}
                   </div>
                   <div>

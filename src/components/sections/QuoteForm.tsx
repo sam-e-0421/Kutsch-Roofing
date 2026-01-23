@@ -42,8 +42,8 @@ export function QuoteForm() {
     <div className="glass border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
       {/* Header */}
       <div className="flex items-center gap-4 p-6 bg-white/5 border-b border-white/5">
-        <div className="w-12 h-12 bg-gold-500/15 border border-gold-500/25 rounded-xl flex items-center justify-center">
-          <FileText className="w-6 h-6 text-gold-500" />
+        <div className="w-12 h-12 bg-yellow-500/15 border border-yellow-500/25 rounded-xl flex items-center justify-center">
+          <FileText className="w-6 h-6 text-yellow-400" />
         </div>
         <div>
           <h2 className="text-xl font-bold text-white">
@@ -101,7 +101,7 @@ export function QuoteForm() {
                     {service.title}
                   </option>
                 ))}
-                <option value="Storm Damage Assessment">Storm Damage Assessment</option>
+                <option value="Color Consultation">Color Consultation</option>
               </select>
               <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/40">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -132,7 +132,7 @@ export function QuoteForm() {
             id="message"
             name="message"
             rows={3}
-            placeholder="Describe your roofing needs, timeline, or any concerns..."
+            placeholder="Describe your painting project, color preferences, timeline..."
             className="input resize-none"
           />
         </div>

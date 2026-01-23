@@ -17,39 +17,34 @@ export function Footer() {
                 <svg viewBox="0 0 48 48" className="w-full h-full">
                   <defs>
                     <linearGradient id="logoGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style={{ stopColor: '#f0c654' }} />
-                      <stop offset="100%" style={{ stopColor: '#d4a438' }} />
+                      <stop offset="0%" style={{ stopColor: '#facc15' }} />
+                      <stop offset="100%" style={{ stopColor: '#eab308' }} />
                     </linearGradient>
                   </defs>
+                  {/* Paint brush icon */}
                   <path
-                    d="M24 6L4 22v22h40V22L24 6z"
-                    fill="none"
-                    stroke="url(#logoGradFooter)"
-                    strokeWidth="2.5"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M16 44V30h16v14"
-                    fill="none"
-                    stroke="url(#logoGradFooter)"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M0 20l24-16 24 16"
+                    d="M12 36c0-4 4-8 12-14 8-6 12-10 12-14 0-2-1-4-4-4s-8 4-12 10c-4 6-8 10-8 14 0 6 4 8 6 8s6-2 6-8"
                     fill="none"
                     stroke="url(#logoGradFooter)"
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
+                  <path
+                    d="M6 42c2-2 4-4 6-6"
+                    fill="none"
+                    stroke="url(#logoGradFooter)"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                  />
+                  <circle cx="34" cy="8" r="3" fill="url(#logoGradFooter)" opacity="0.6" />
                 </svg>
               </div>
               <span className="font-extrabold text-lg">{COMPANY.name}</span>
             </Link>
-            <p className="text-sm text-gold-500 mb-4">{COMPANY.tagline}</p>
+            <p className="text-sm text-yellow-400 mb-4">{COMPANY.tagline}</p>
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
-              Delivering quality craftsmanship and exceptional service to homeowners across central Nebraska.
+              Transforming Nebraska homes and businesses with expert painting services and exceptional attention to detail.
             </p>
           </div>
 
@@ -91,7 +86,7 @@ export function Footer() {
           {/* Contact & CTA */}
           <div>
             <h4 className="font-bold text-sm uppercase tracking-wider mb-6">Get Started</h4>
-            <p className="text-sm text-white/60 mb-6">Ready for a new roof? Get your free quote today.</p>
+            <p className="text-sm text-white/60 mb-6">Ready to transform your space? Get your free quote today.</p>
             <Button href="/contact#quote" variant="primary" showArrow className="mb-8">
               Free Quote
             </Button>
@@ -101,18 +96,18 @@ export function Footer() {
                 href={COMPANY.phoneHref}
                 className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
               >
-                <Phone className="w-4 h-4 text-gold-500" />
+                <Phone className="w-4 h-4 text-yellow-400" />
                 {COMPANY.phone}
               </a>
               <a
                 href={`mailto:${COMPANY.email}`}
                 className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
               >
-                <Mail className="w-4 h-4 text-gold-500" />
+                <Mail className="w-4 h-4 text-yellow-400" />
                 {COMPANY.email}
               </a>
               <div className="flex items-start gap-3 text-white/70">
-                <MapPin className="w-4 h-4 text-gold-500 mt-0.5" />
+                <MapPin className="w-4 h-4 text-yellow-400 mt-0.5" />
                 <span>
                   {COMPANY.address.street}
                   <br />
@@ -128,7 +123,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container-custom py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/50">
           <p>&copy; {currentYear} {COMPANY.name}. All rights reserved.</p>
-          <p className="text-xs">Built with ❤️ by Sites by Sam</p>
+          <p className="text-xs">Built with love by Sites by Sam</p>
         </div>
       </div>
     </footer>

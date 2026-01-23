@@ -18,7 +18,7 @@ export function FAQ() {
             <span className="section-eyebrow">FAQ</span>
             <h2 className="section-title">Common questions, clear answers</h2>
             <p className="section-description mb-8">
-              Everything you need to know about working with Kutsch Roofing. Still have questions? We&apos;re just a call away.
+              Everything you need to know about working with Kutsch Painting. Still have questions? We&apos;re just a call away.
             </p>
             <Button href={COMPANY.phoneHref} variant="outline-dark">
               <Phone className="w-4 h-4" />
@@ -47,8 +47,8 @@ export function FAQ() {
                     className={cn(
                       'w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-all',
                       openIndex === index
-                        ? 'bg-gold-500 text-navy-900'
-                        : 'bg-navy-700/10 text-navy-700'
+                        ? 'bg-yellow-500 text-red-950'
+                        : 'bg-red-700/10 text-red-700'
                     )}
                   >
                     {openIndex === index ? (
